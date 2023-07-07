@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins";
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+a {
+  display: block;
+  color: #000;
+}
+
+img {
+  display: block;
+}
+
+body {
+  margin: 2vh 5vw 20vh;
+}
+
+.light {
+  color: #fff;
+}
+
+.black {
+  font-weight: 900;
+}
+
+.heavy {
+  font-weight: 700;
+}
+
+.mobile {
+  display: none;
+}
+
+.btn {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #000;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.1rem 2.5rem;
+  border: 0.05rem solid #fff;
+  transition: ease-in-out 0.5s all;
+}
+.btn:hover {
+  filter: invert(100%);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+}
+
+.article-formating {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 4rem;
+  border-top: 0.6rem solid #000;
+}
+.article-formating img {
+  width: 100%;
+}
+.article-formating h4 {
+  padding: 0 2rem;
+}
+.article-formating h3 {
+  padding: 1.5rem 2rem 0 2rem;
+}
+.article-formating p {
+  font-size: 0.85rem;
+  padding: 2rem 2rem 0;
+}
+.article-formating a {
+  margin-left: 2rem;
+}
+
+.language {
+  display: flex;
+  justify-content: end;
+  font-size: 1rem;
+}
+.language .language-divide {
+  margin: 0 0.4rem;
+}
+.language .fr {
+  transition: 0.3s all;
+}
+.language .fr:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+.language .en {
+  transition: 0.3s all;
+}
+.language .en:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 5vh 0 15vh;
+}
+nav .logo {
+  transition: ease-in-out 0.3s all;
+}
+nav .logo:hover {
+  scale: 1.1;
+}
+nav .logo .logo-top {
+  font-size: 4rem;
+  line-height: 3rem;
+}
+nav .logo .logo-bottom {
+  font-size: 1.27rem;
+}
+nav .navbar ul {
+  font-size: 0;
+  display: flex;
+  padding-bottom: 1rem;
+}
+nav .navbar ul li {
+  padding-left: 2.5rem;
+}
+nav .navbar ul li .underlined {
+  border-bottom: 0.2rem solid #000;
+}
+nav .navbar ul li a {
+  font-size: 1.2rem;
+  transition: ease-in-out 0.3s all;
+}
+nav .navbar ul li a:hover {
+  border-bottom: 0.2rem solid #000;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  margin-bottom: 15vh;
+}
+.header img {
+  width: 71vw;
+}
+.header .lego-house {
+  font-size: 7rem;
+  line-height: 7rem;
+  position: absolute;
+  right: 4%;
+  top: 11%;
+}
+.header .lego-house .underlined {
+  border-bottom: 0.6rem solid #000;
+}
+.header .carousel {
+  position: absolute;
+  z-index: -1;
+  right: 9%;
+  bottom: 0;
+  width: 17vw;
+}
+.header .carousel img {
+  width: 100%;
+}
+.header .carousel .arrows {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
+}
+.header .carousel .arrows p {
+  margin: 0 1.8rem 1rem;
+}
+
+.project {
+  padding-left: 2vw;
+  margin-bottom: 15vh;
+}
+.project h1 {
+  font-size: 1.75rem;
+  padding-bottom: 2rem;
+}
+.project .project-content {
+  display: flex;
+  justify-content: space-between;
+}
+.project .project-content .content-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18vw;
+}
+.project .project-content p {
+  font-size: 0.8rem;
+  width: 18vw;
+}
+.project .project-content .content-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project .project-content h2 {
+  width: 18vw;
+  line-height: 4rem;
+  padding: 2.5rem 1.5rem 8rem;
+  font-size: 3.5rem;
+  border: 0.6rem solid #000;
+}
+
+.finished-projects {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15vh;
+}
+.finished-projects .last-project {
+  width: 43vw;
+  background-color: #000;
+  margin-bottom: 10vh;
+}
+.finished-projects .last-project img {
+  width: 100%;
+}
+.finished-projects .last-project p {
+  color: #fff;
+  font-size: 1rem;
+  padding: 5rem 8rem 5rem 2rem;
+}
+.finished-projects .last-project a {
+  margin: 0 2rem 3.5rem;
+}
+.finished-projects .article-formating {
+  width: 21.5vw;
+  margin-top: 40vh;
+}
+.finished-projects .article-formating img {
+  width: 20vw;
+  padding-top: 2rem;
+}
+
+.lowcost {
+  margin: 30.5vh 0 30vh;
+  display: flex;
+  justify-content: space-between;
+}
+.lowcost .article-formating {
+  width: 44vw;
+}
+.lowcost .lowcost-image {
+  width: 44vw;
+  position: relative;
+}
+.lowcost .lowcost-image .lowcost-quote {
+  position: absolute;
+  top: -16vh;
+  right: 4vw;
+  border: 0.6rem solid #000;
+  font-size: 4rem;
+  line-height: 5rem;
+  padding: 2rem;
+}
+.lowcost .lowcost-image .into {
+  position: absolute;
+  bottom: 12vh;
+  right: -10.05vw;
+  font-size: 8vw;
+  transform: rotate(90deg);
+  background-image: linear-gradient(#000 50%, #fff 50%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.lowcost .lowcost-image img {
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+}
+footer .footer-parts {
+  width: 20vw;
+}
+footer .footer-parts .logo-footer {
+  font-size: 2rem;
+  line-height: 5rem;
+  transition: ease-in-out 0.3s all;
+}
+footer .footer-parts .logo-footer:hover {
+  font-size: 2.25rem;
+}
+footer .footer-parts .footer-text {
+  font-size: 0.8rem;
+}/*# sourceMappingURL=styles.css.map */
