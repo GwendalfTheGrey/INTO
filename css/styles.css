@@ -22,7 +22,7 @@ img {
 }
 
 body {
-  margin: 2vh 5vw 20vh;
+  margin: 2vh 5vw 7.8vw;
 }
 
 .light {
@@ -70,11 +70,12 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 4rem;
   border-top: 0.6rem solid #000;
+  padding-top: 4rem;
 }
 .article-formating img {
   width: 100%;
+  padding-top: 2rem;
 }
 .article-formating h4 {
   padding: 0 2rem;
@@ -117,7 +118,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 5vh 0 15vh;
+  margin: 2.2vw 0 6.6vw;
 }
 nav .logo {
   transition: ease-in-out 0.3s all;
@@ -154,25 +155,27 @@ nav .navbar ul li a:hover {
 .header {
   position: relative;
   display: flex;
-  margin-bottom: 15vh;
+  margin-bottom: 6.6vw;
 }
 .header img {
+  z-index: 1;
   width: 71vw;
 }
 .header .lego-house {
   font-size: 7rem;
   line-height: 7rem;
   position: absolute;
-  right: 4%;
-  top: 11%;
+  right: 3.64vw;
+  top: 3.75vw;
+  z-index: 1;
 }
 .header .lego-house .underlined {
   border-bottom: 0.6rem solid #000;
 }
 .header .carousel {
   position: absolute;
-  z-index: -1;
-  right: 9%;
+  z-index: 0;
+  right: 8.2vw;
   bottom: 0;
   width: 17vw;
 }
@@ -186,11 +189,16 @@ nav .navbar ul li a:hover {
 }
 .header .carousel .arrows p {
   margin: 0 1.8rem 1rem;
+  transition: ease-in-out 0.3s all;
+  cursor: pointer;
+}
+.header .carousel .arrows p:hover {
+  scale: 1.5;
 }
 
 .project {
   padding-left: 2vw;
-  margin-bottom: 15vh;
+  margin-bottom: 6.6vw;
 }
 .project h1 {
   font-size: 1.75rem;
@@ -204,34 +212,33 @@ nav .navbar ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 18vw;
 }
 .project .project-content p {
   font-size: 0.8rem;
-  width: 18vw;
+  width: 20vw;
 }
 .project .project-content .content-two {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.project .project-content h2 {
+.project .project-content .big-project {
   width: 18vw;
   line-height: 4rem;
   padding: 2.5rem 1.5rem 8rem;
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   border: 0.6rem solid #000;
 }
 
 .finished-projects {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15vh;
+  margin-bottom: 6.6vw;
 }
 .finished-projects .last-project {
   width: 43vw;
   background-color: #000;
-  margin-bottom: 10vh;
+  margin-bottom: 4.4vw;
 }
 .finished-projects .last-project img {
   width: 100%;
@@ -244,31 +251,32 @@ nav .navbar ul li a:hover {
 .finished-projects .last-project a {
   margin: 0 2rem 3.5rem;
 }
-.finished-projects .article-formating {
-  width: 21.5vw;
-  margin-top: 40vh;
+.finished-projects .other-projects {
+  display: flex;
+  justify-content: space-between;
+  width: 44.5vw;
 }
-.finished-projects .article-formating img {
-  width: 20vw;
-  padding-top: 2rem;
+.finished-projects .other-projects .article-formating {
+  width: 21.5vw;
+  margin-top: 17.6vw;
 }
 
 .lowcost {
-  margin: 30.5vh 0 30vh;
+  margin: 14vw 0 13.2vw;
   display: flex;
   justify-content: space-between;
 }
 .lowcost .article-formating {
-  width: 44vw;
+  width: 43.75vw;
 }
 .lowcost .lowcost-image {
-  width: 44vw;
+  width: 43.75vw;
   position: relative;
 }
 .lowcost .lowcost-image .lowcost-quote {
   position: absolute;
-  top: -16vh;
-  right: 4vw;
+  top: -7.7vw;
+  right: 3.4vw;
   border: 0.6rem solid #000;
   font-size: 4rem;
   line-height: 5rem;
@@ -276,7 +284,7 @@ nav .navbar ul li a:hover {
 }
 .lowcost .lowcost-image .into {
   position: absolute;
-  bottom: 12vh;
+  bottom: 6.25vw;
   right: -10.05vw;
   font-size: 8vw;
   transform: rotate(90deg);
@@ -306,4 +314,206 @@ footer .footer-parts .logo-footer:hover {
 }
 footer .footer-parts .footer-text {
   font-size: 0.8rem;
+}
+
+@media screen and (min-width: 1921px) and (max-width: 2560px) {
+  html {
+    font-size: 24px;
+  }
+  nav {
+    margin-bottom: 7.5vw;
+  }
+  .header {
+    margin-bottom: 7.5vw;
+  }
+  .header .lego-house {
+    right: 6%;
+  }
+  .header .carousel .arrows p {
+    margin: 0 2.25rem 1rem;
+  }
+  .project {
+    margin-bottom: 7.5vw;
+  }
+  .project .project-content .big-project {
+    font-size: 3.8rem;
+  }
+  .finished-projects {
+    margin-bottom: 7.5vw;
+  }
+  .finished-projects .other-projects .article-formating {
+    margin-top: 20vw;
+  }
+  .lowcost {
+    margin: 14.9vw 0 14.1vw;
+  }
+  .lowcost .lowcost-image .lowcost-quote {
+    top: -7.1vw;
+  }
+  .lowcost .lowcost-image .into {
+    right: -10vw;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  .header .lego-house {
+    top: 8%;
+  }
+  .project .project-content .big-project {
+    font-size: 3.1rem;
+  }
+  .lowcost .lowcost-image .lowcost-quote {
+    top: -8.2vw;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+  .header .lego-house {
+    top: 6%;
+    right: 3.25%;
+  }
+  .project .project-content .big-project {
+    font-size: 3.1rem;
+  }
+  .finished-projects .last-project {
+    width: 44vw;
+  }
+  .lowcost .lowcost-image .lowcost-quote {
+    top: -8.1vw;
+  }
+}
+@media screen and (min-width: 961px) and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+  .header .lego-house {
+    font-size: 5rem;
+    line-height: 5rem;
+    top: 9%;
+    right: 6.3%;
+  }
+  .header .carousel {
+    bottom: -2vw;
+  }
+  .header .carousel .arrows {
+    margin: 0 -0.5rem 1rem;
+  }
+  .project .project-content {
+    flex-wrap: wrap;
+  }
+  .project .project-content .content-one .desktop {
+    display: none;
+  }
+  .project .project-content p {
+    width: 42vw;
+    padding-bottom: 2rem;
+  }
+  .project .project-content .content-two .mobile {
+    display: block;
+  }
+  .project .project-content .big-project {
+    width: 42vw;
+    padding: 3rem 3.5rem;
+  }
+  .finished-projects {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .finished-projects .last-project {
+    width: 60vw;
+    margin-bottom: 0;
+  }
+  .finished-projects .other-projects {
+    width: 100%;
+  }
+  .finished-projects .other-projects .penultimate-project {
+    width: 44.5vw;
+    margin-top: 6.6vw;
+  }
+  .finished-projects .other-projects .ante-penultimate-project {
+    width: 44.5vw;
+    margin-top: 6.6vw;
+  }
+  .finished-projects .other-projects .ante-penultimate-project a {
+    margin-top: 3rem;
+  }
+  .lowcost .lowcost-image .lowcost-quote {
+    font-size: 3rem;
+    padding: 0.75rem 2rem;
+    top: -8.5vw;
+  }
+  .lowcost .lowcost-image .into {
+    font-size: 5rem;
+    right: -8.55vw;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 960px) {
+  html {
+    font-size: 14px;
+  }
+  .article-formating {
+    padding-top: 2rem;
+  }
+  .header .lego-house {
+    font-size: 5rem;
+    line-height: 5rem;
+    top: 9%;
+    right: 5.2%;
+  }
+  .header .carousel {
+    bottom: -2vw;
+    right: 7vw;
+  }
+  .header .carousel .arrows {
+    margin: 0 -0.5rem 1rem;
+  }
+  .project .project-content {
+    flex-wrap: wrap;
+  }
+  .project .project-content .content-one .desktop {
+    display: none;
+  }
+  .project .project-content p {
+    width: 42vw;
+    padding-bottom: 2rem;
+  }
+  .project .project-content .content-two .mobile {
+    display: block;
+  }
+  .project .project-content .big-project {
+    width: 42vw;
+    padding: 2rem 2.5rem;
+  }
+  .finished-projects {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .finished-projects .last-project {
+    width: 60vw;
+    margin-bottom: 0;
+  }
+  .finished-projects .other-projects {
+    width: 100%;
+  }
+  .finished-projects .other-projects .penultimate-project {
+    width: 44.5vw;
+    margin-top: 6.6vw;
+  }
+  .finished-projects .other-projects .ante-penultimate-project {
+    width: 44.5vw;
+    margin-top: 6.6vw;
+  }
+  .finished-projects .other-projects .ante-penultimate-project a {
+    margin-top: 3rem;
+  }
+  .lowcost .lowcost-image .lowcost-quote {
+    font-size: 3rem;
+    padding: 0.75rem 2rem;
+    top: -8.9vw;
+  }
+  .lowcost .lowcost-image .into {
+    font-size: 5rem;
+    right: -9.1vw;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -26,12 +26,13 @@ img{
 }
 
 body{
-    margin: 2vh 5vw 20vh;
+    margin: 2vh 5vw 7.8vw;
 }
 
 .light{
     color: #fff;
 }
+
 
 // UN BOUTON POUR ALLER EN HAUT DE LA PAGE (SI ON VEUT)
 // #page-top{
@@ -47,6 +48,7 @@ body{
 //     bottom: 4vh;
 //     right: 2vw;
 // }
+
 
 // GRAISSES DE POLICE DE CARACTÈRES
 .black{
@@ -91,14 +93,20 @@ h4{
 }
 
 // ÉDTION DES ARTICLES
+// .line{
+//     border-top: .6rem solid #000;
+//     width: 21.5vw;
+// }
+
 .article-formating{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 4rem;
     border-top: .6rem solid #000;
+    padding-top: 4rem;
     img{
         width: 100%;
+        padding-top: 2rem;
     }
     h4{
         padding: 0 2rem;
@@ -147,7 +155,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 5vh 0 15vh;
+    margin: 2.2vw 0 6.6vw;
     .logo{
         transition: ease-in-out .3s all;
         &:hover{
@@ -188,24 +196,26 @@ nav{
 .header{
     position: relative;
     display: flex;
-    margin-bottom: 15vh;
+    margin-bottom: 6.6vw;
     img{
+        z-index: 1;
         width: 71vw;
     }
     .lego-house{
         font-size: 7rem;
         line-height: 7rem;
         position: absolute;
-        right: 4%;
-        top: 11%;
+        right: 3.64vw;
+        top: 3.75vw;
+        z-index: 1;
         .underlined{
             border-bottom: .6rem solid #000;
         }
     }
     .carousel{
         position: absolute;
-        z-index: -1;
-        right: 9%;
+        z-index: 0;
+        right: 8.2vw;
         bottom: 0;
         width: 17vw;
         img{
@@ -217,6 +227,11 @@ nav{
             font-size: 2rem;
             p{
                 margin: 0 1.8rem 1rem;
+                transition: ease-in-out .3s all;
+                cursor: pointer;
+                &:hover{
+                    scale: 1.5;
+                }
             }
         }
     }
@@ -228,7 +243,7 @@ nav{
 // SECTION PROJET
 .project{
     padding-left: 2vw;
-    margin-bottom: 15vh;
+    margin-bottom: 6.6vw;
     h1{
     font-size: 1.75rem;
     padding-bottom: 2rem;
@@ -240,22 +255,21 @@ nav{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 18vw;
         }
         p{
             font-size: .8rem;
-            width: 18vw;
+            width: 20vw;
         }
         .content-two{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        h2{
+        .big-project{
             width: 18vw;
             line-height: 4rem;
             padding: 2.5rem 1.5rem 8rem;
-            font-size: 3.5rem;
+            font-size: 3.3rem;
             border: .6rem solid #000;
         }
     }
@@ -265,11 +279,11 @@ nav{
 .finished-projects{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15vh;
+    margin-bottom: 6.6vw;
     .last-project{
         width: 43vw;
         background-color: #000;
-        margin-bottom: 10vh;
+        margin-bottom: 4.4vw;
         img{
             width: 100%;
         }
@@ -282,32 +296,35 @@ nav{
             margin: 0 2rem 3.5rem;
         }
     }
-    .article-formating{
-        width: 21.5vw;
-        margin-top: 40vh;
-        img{
-            width: 20vw;
-            padding-top: 2rem;
+    .other-projects{
+        display: flex;
+        justify-content: space-between;
+        width: 44.5vw;
+        .article-formating{
+            width: 21.5vw;
+            margin-top: 17.6vw;
         }
     }
 }
 
 // SECTION PREMIER PRIX
 .lowcost{
-    margin: 30.5vh 0 30vh;
+    margin: 14vw 0 13.2vw;
     display: flex;
     justify-content: space-between;
     .article-formating{
-        width: 44vw;
+        width: 43.75vw;
+        // border-style: none;
+        // padding-top: 0;
     }
     .lowcost-image{
-        width: 44vw;
+        width: 43.75vw;
         position: relative;
         // ENCART PREMIER PRIX
         .lowcost-quote{
             position: absolute;
-            top: -16vh;
-            right: 4vw;
+            top: -7.7vw;
+            right: 3.4vw;
             border: .6rem solid #000;
             font-size: 4rem;
             line-height: 5rem;
@@ -316,7 +333,7 @@ nav{
         // INTO NOIR ET BLANC
         .into{
             position: absolute;
-            bottom: 12vh;
+            bottom: 6.25vw;
             right: -10.05vw;
             font-size: 8vw;
             transform: rotate(90deg);
@@ -350,4 +367,310 @@ footer{
         }
 
     }
+}
+
+
+// RESPONSIVE
+// ÉCRAN DE 2560 PX DE LARGE
+@media screen and (min-width: 1921px) and (max-width: 2560px){
+    html{
+        font-size: 24px;
+    }
+
+    nav{
+        margin-bottom: 7.5vw;
+    }
+
+    .header{
+        margin-bottom: 7.5vw;
+        .lego-house{
+            right: 6%;
+        }
+        .carousel{
+            .arrows{
+                p{
+                    margin: 0 2.25rem 1rem;
+                }
+            }
+        }
+    }
+    
+    .project{
+        margin-bottom: 7.5vw;
+        .project-content{
+            .big-project{
+                font-size: 3.8rem;
+            }
+        }
+    }
+    
+    .finished-projects{
+        margin-bottom: 7.5vw;
+        .other-projects{
+            .article-formating{
+                margin-top: 20vw;
+            }
+        }
+    }
+    
+    .lowcost{
+        margin: 14.9vw 0 14.1vw;
+        .lowcost-image{
+            .lowcost-quote{
+                top: -7.1vw;
+            }
+            .into{
+                right: -10vw;
+            }
+        }
+    }
+}
+
+// ÉCRAN DE 1920 PX DE LARGE
+@media screen and (min-width: 1441px) and (max-width: 1920px) {}
+
+// ÉCRAN DE 1440 PX DE LARGE
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+    .header{
+        .lego-house{
+            top: 8%;
+        }
+    }
+    
+    .project{
+        .project-content{
+            .big-project{
+                font-size: 3.1rem;
+            }
+        }
+    }
+
+    .lowcost{
+        .lowcost-image{
+            .lowcost-quote{
+                top: -8.2vw;
+            }
+        }
+    }
+}
+
+// ÉCRAN DE 1200 PX DE LARGE
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    html{
+        font-size: 14px;
+    }
+
+    .header{
+        .lego-house{
+            top: 6%;
+            right: 3.25%;
+        }
+    }
+
+    .project{
+        .project-content{
+            .big-project{
+                font-size: 3.1rem;
+            }
+        }
+    }
+
+    .finished-projects{
+        .last-project{
+            width: 44vw;
+        }
+    }
+
+    .lowcost{
+        .lowcost-image{
+            .lowcost-quote{
+                top: -8.1vw;
+            }
+        }
+    }
+}
+
+// ÉCRAN DE 1024 PX DE LARGE
+@media screen and (min-width: 961px) and (max-width: 1024px) {
+    html{
+        font-size: 14px;
+    }
+
+    .header{
+        .lego-house{
+            font-size: 5rem;
+            line-height: 5rem;
+            top: 9%;
+            right: 6.3%;
+        }
+        .carousel{
+            bottom: -2vw;
+            .arrows{
+                margin: 0 -.5rem 1rem;
+            }
+        }
+    }
+    .project{
+        .project-content{
+            flex-wrap: wrap;
+            .content-one{
+                .desktop{
+                    display: none;
+                }
+            }
+            p{
+                width: 42vw;
+                padding-bottom: 2rem;
+            }
+            .content-two{
+                .mobile{
+                    display: block;
+                }
+            }
+            .big-project{
+                width: 42vw;
+                padding: 3rem 3.5rem;
+            }
+        }
+    }
+
+    .finished-projects{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .last-project{
+            width: 60vw;
+            margin-bottom: 0;
+        }
+        .other-projects{
+            width: 100%;
+            .penultimate-project{
+                width: 44.5vw;
+                margin-top: 6.6vw;
+            }
+            .ante-penultimate-project{
+                width: 44.5vw;
+                margin-top: 6.6vw;
+                a{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+
+    .lowcost{
+        .lowcost-image{
+            .lowcost-quote{
+                font-size: 3rem;
+                padding: .75rem 2rem;
+                top: -8.5vw;
+            }
+            .into{
+                font-size: 5rem;
+                right: -8.55vw;
+            }
+        }
+    }
+}
+
+// ÉCRAN DE 960 PX DE LARGE
+@media screen and (min-width: 769px) and (max-width: 960px) {
+    html{
+        font-size: 14px;
+    }
+
+    .article-formating{
+        padding-top: 2rem;
+    }
+
+    .header{
+        .lego-house{
+            font-size: 5rem;
+            line-height: 5rem;
+            top: 9%;
+            right: 5.2%;
+        }
+        .carousel{
+            bottom: -2vw;
+            right: 7vw;
+            .arrows{
+                margin: 0 -.5rem 1rem;
+            }
+        }
+    }
+    .project{
+        .project-content{
+            flex-wrap: wrap;
+            .content-one{
+                .desktop{
+                    display: none;
+                }
+            }
+            p{
+                width: 42vw;
+                padding-bottom: 2rem;
+            }
+            .content-two{
+                .mobile{
+                    display: block;
+                }
+            }
+            .big-project{
+                width: 42vw;
+                padding: 2rem 2.5rem;
+            }
+        }
+    }
+
+    .finished-projects{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .last-project{
+            width: 60vw;
+            margin-bottom: 0;
+        }
+        .other-projects{
+            width: 100%;
+            .penultimate-project{
+                width: 44.5vw;
+                margin-top: 6.6vw;
+            }
+            .ante-penultimate-project{
+                width: 44.5vw;
+                margin-top: 6.6vw;
+                a{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+
+    .lowcost{
+        .lowcost-image{
+            .lowcost-quote{
+                font-size: 3rem;
+                padding: .75rem 2rem;
+                top: -8.9vw;
+            }
+            .into{
+                font-size: 5rem;
+                right: -9.1vw;
+            }
+        }
+    }
+}
+
+
+// ÉCRAN DE 768 PX DE LARGE
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    
+}
+
+// ÉCRAN DE 480 PX DE LARGE
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    
+}
+
+// ÉCRAN DE 320 PX DE LARGE
+@media screen and (min-width: 1px) and (max-width: 320px) {
+    
 }
