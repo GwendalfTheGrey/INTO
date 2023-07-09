@@ -91,25 +91,25 @@ h4 {
   margin-left: 2rem;
 }
 
-.language {
+#language {
   display: flex;
   justify-content: end;
   font-size: 1rem;
 }
-.language .language-divide {
+#language .language-divide {
   margin: 0 0.4rem;
 }
-.language .fr {
+#language .fr {
   transition: 0.3s all;
 }
-.language .fr:hover {
+#language .fr:hover {
   cursor: pointer;
   scale: 1.2;
 }
-.language .en {
+#language .en {
   transition: 0.3s all;
 }
-.language .en:hover {
+#language .en:hover {
   cursor: pointer;
   scale: 1.2;
 }
@@ -133,22 +133,22 @@ nav .logo .logo-top {
 nav .logo .logo-bottom {
   font-size: 1.27rem;
 }
-nav .navbar ul {
+nav #navbar ul {
   font-size: 0;
   display: flex;
   padding-bottom: 1rem;
 }
-nav .navbar ul li {
+nav #navbar ul li {
   padding-left: 2.5rem;
 }
-nav .navbar ul li .underlined {
+nav #navbar ul li .underlined {
   border-bottom: 0.2rem solid #000;
 }
-nav .navbar ul li a {
+nav #navbar ul li a {
   font-size: 1.2rem;
   transition: ease-in-out 0.3s all;
 }
-nav .navbar ul li a:hover {
+nav #navbar ul li a:hover {
   border-bottom: 0.2rem solid #000;
 }
 
@@ -246,7 +246,7 @@ nav .navbar ul li a:hover {
 .finished-projects .last-project p {
   color: #fff;
   font-size: 1rem;
-  padding: 5rem 8rem 5rem 2rem;
+  padding: 5rem 6rem 5rem 2rem;
 }
 .finished-projects .last-project a {
   margin: 0 2rem 3.5rem;
@@ -424,6 +424,9 @@ footer .footer-parts .footer-text {
     width: 60vw;
     margin-bottom: 0;
   }
+  .finished-projects .last-project p {
+    padding: 4rem 6rem 4rem 2rem;
+  }
   .finished-projects .other-projects {
     width: 100%;
   }
@@ -493,6 +496,9 @@ footer .footer-parts .footer-text {
     width: 60vw;
     margin-bottom: 0;
   }
+  .finished-projects .last-project p {
+    padding: 4rem 6rem 4rem 2rem;
+  }
   .finished-projects .other-projects {
     width: 100%;
   }
@@ -515,5 +521,639 @@ footer .footer-parts .footer-text {
   .lowcost .lowcost-image .into {
     font-size: 5rem;
     right: -9.1vw;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .article-formating {
+    padding-top: 2rem;
+  }
+  #toggle {
+    position: fixed;
+    z-index: 10;
+    display: block;
+    width: 3vw;
+    height: 0.3rem;
+    top: 7vw;
+    right: 5.5vw;
+    background-color: #000;
+    outline: 0.1rem solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: ease-in-out 0.5s all;
+  }
+  #toggle::before, #toggle::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 5vw;
+    height: 0.3rem;
+    background-color: #000;
+    outline: 0.1rem solid rgba(255, 255, 255, 0.7);
+    transition: ease-in-out 0.5s all;
+  }
+  #toggle::before {
+    top: -1.75vw;
+    right: 0;
+  }
+  #toggle::after {
+    top: 1.75vw;
+    right: 0;
+  }
+  #toggle.active {
+    background-color: transparent;
+  }
+  #toggle.active::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  #toggle.active::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  #language {
+    position: fixed;
+    z-index: 4;
+    top: 5.3vw;
+    right: -137vw;
+    font-size: 1.5rem;
+    transition: ease-in-out 0.3s all;
+  }
+  #language.active {
+    right: 37vw;
+  }
+  nav #navbar {
+    position: fixed;
+    z-index: 3;
+    width: 50vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 0.34rem solid #000;
+    right: -100%;
+    top: 0;
+    transition: ease-in-out 0.3s all;
+  }
+  nav #navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 17vw;
+  }
+  nav #navbar ul li .underlined {
+    border-width: 0.3rem;
+  }
+  nav #navbar ul li a {
+    font-size: 2.5rem;
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+  nav #navbar.active {
+    right: 0;
+  }
+  .header {
+    margin-bottom: 25vw;
+  }
+  .header img {
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+  }
+  .header .lego-house {
+    font-size: 6rem;
+    line-height: 5rem;
+    top: 9%;
+    right: 55%;
+  }
+  .header .carousel {
+    bottom: -18vw;
+    right: 18vw;
+    width: 60%;
+  }
+  .header .carousel img {
+    box-shadow: none;
+  }
+  .header .carousel .arrows {
+    justify-content: center;
+    font-size: 3rem;
+  }
+  .header .carousel .arrows p {
+    margin: 0 4rem;
+  }
+  .project {
+    margin-bottom: 12vw;
+  }
+  .project .project-content {
+    flex-wrap: wrap;
+  }
+  .project .project-content .content-one .desktop {
+    display: none;
+  }
+  .project .project-content p {
+    width: 42vw;
+    padding-bottom: 2rem;
+  }
+  .project .project-content .content-two .mobile {
+    display: block;
+  }
+  .project .project-content .big-project {
+    width: 42vw;
+    padding: 2rem 2.5rem;
+  }
+  .finished-projects {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .finished-projects .last-project {
+    width: 80vw;
+    margin-bottom: 0;
+  }
+  .finished-projects .last-project p {
+    padding: 4rem 6rem 4rem 2rem;
+  }
+  .finished-projects .other-projects {
+    width: 100%;
+  }
+  .finished-projects .other-projects .penultimate-project {
+    width: 44.5vw;
+    margin-top: 6.6vw;
+  }
+  .finished-projects .other-projects .ante-penultimate-project {
+    width: 44.5vw;
+    margin-top: 6.6vw;
+  }
+  .finished-projects .other-projects .ante-penultimate-project a {
+    margin-top: 3rem;
+  }
+  .lowcost {
+    flex-direction: column-reverse;
+    margin-top: 25vw;
+  }
+  .lowcost .article-formating {
+    width: 100%;
+  }
+  .lowcost .article-formating a {
+    margin-top: 2rem;
+  }
+  .lowcost .lowcost-image {
+    width: 94%;
+    margin-bottom: 6.6vw;
+  }
+  .lowcost .lowcost-image .lowcost-quote {
+    font-size: 4rem;
+    padding: 2rem 2rem;
+    top: -13.6vw;
+    right: 6vw;
+  }
+  .lowcost .lowcost-image .into {
+    font-size: 8rem;
+    right: -18.22vw;
+    bottom: 12vw;
+  }
+  footer {
+    justify-content: space-evenly;
+  }
+  footer .footer-parts {
+    width: 20%;
+    text-align: center;
+  }
+  footer .footer-parts .logo-footer {
+    position: relative;
+    right: -150%;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  .article-formating {
+    padding-top: 2rem;
+    border-width: 0.5rem;
+  }
+  #toggle {
+    position: fixed;
+    z-index: 10;
+    display: block;
+    width: 7vw;
+    height: 0.3rem;
+    top: 11vw;
+    right: 5.5vw;
+    background-color: #000;
+    outline: 0.1rem solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: ease-in-out 0.5s all;
+  }
+  #toggle::before, #toggle::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10vw;
+    height: 0.3rem;
+    background-color: #000;
+    outline: 0.1rem solid rgba(255, 255, 255, 0.7);
+    transition: ease-in-out 0.5s all;
+  }
+  #toggle::before {
+    top: -2.5vw;
+    right: 0;
+  }
+  #toggle::after {
+    top: 2.5vw;
+    right: 0;
+  }
+  #toggle.active {
+    background-color: transparent;
+  }
+  #toggle.active::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  #toggle.active::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  #language {
+    position: fixed;
+    z-index: 4;
+    top: 8vw;
+    right: -137vw;
+    font-size: 1.5rem;
+    transition: ease-in-out 0.3s all;
+  }
+  #language.active {
+    right: 55vw;
+  }
+  nav .logo .logo-top {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+  nav .logo .logo-bottom {
+    font-size: 0.95rem;
+  }
+  nav #navbar {
+    position: fixed;
+    z-index: 3;
+    width: 75vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 0.34rem solid #000;
+    right: -100%;
+    top: 0;
+    transition: ease-in-out 0.3s all;
+  }
+  nav #navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 17vw;
+  }
+  nav #navbar ul li .underlined {
+    border-width: 0.3rem;
+  }
+  nav #navbar ul li a {
+    font-size: 2.5rem;
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+  nav #navbar.active {
+    right: 0;
+  }
+  .header {
+    margin-bottom: 25vw;
+  }
+  .header img {
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+  }
+  .header .lego-house {
+    font-size: 3rem;
+    line-height: 3rem;
+    top: 8%;
+    right: 63%;
+  }
+  .header .lego-house .underlined {
+    border-width: 0.5rem;
+  }
+  .header .carousel {
+    bottom: -18vw;
+    right: 18vw;
+    width: 60%;
+  }
+  .header .carousel img {
+    box-shadow: none;
+  }
+  .header .carousel .arrows {
+    justify-content: center;
+    font-size: 3rem;
+  }
+  .header .carousel .arrows p {
+    margin: 0 4rem;
+  }
+  .project {
+    margin-bottom: 12vw;
+  }
+  .project .project-content {
+    flex-wrap: wrap;
+  }
+  .project .project-content .content-one .desktop {
+    display: none;
+  }
+  .project .project-content p {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+  .project .project-content .content-two .mobile {
+    display: block;
+  }
+  .project .project-content .big-project {
+    margin-top: 3rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border-width: 0.5rem;
+  }
+  .finished-projects {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .finished-projects .last-project {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .finished-projects .last-project p {
+    padding: 4rem 4rem 4rem 2rem;
+  }
+  .finished-projects .other-projects {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .finished-projects .other-projects .penultimate-project {
+    width: 100%;
+    margin-top: 6.6vw;
+  }
+  .finished-projects .other-projects .penultimate-project a {
+    margin-top: 3rem;
+  }
+  .finished-projects .other-projects .ante-penultimate-project {
+    width: 100%;
+    margin-top: 6.6vw;
+  }
+  .finished-projects .other-projects .ante-penultimate-project a {
+    margin-top: 3rem;
+  }
+  .lowcost {
+    flex-direction: column-reverse;
+    margin-top: 30vw;
+  }
+  .lowcost .article-formating {
+    width: 100%;
+  }
+  .lowcost .article-formating a {
+    margin-top: 2rem;
+  }
+  .lowcost .lowcost-image {
+    width: 94%;
+    margin-bottom: 6.6vw;
+  }
+  .lowcost .lowcost-image .lowcost-quote {
+    font-size: 3rem;
+    padding: 0.85rem 2rem;
+    top: -18.5vw;
+    right: 6vw;
+    border-width: 0.5rem;
+  }
+  .lowcost .lowcost-image .into {
+    font-size: 5rem;
+    right: -18.1vw;
+    bottom: 11vw;
+  }
+  footer {
+    justify-content: space-evenly;
+  }
+  footer .footer-parts {
+    width: 20%;
+    text-align: center;
+  }
+  footer .footer-parts .logo-footer {
+    position: relative;
+    right: -150%;
+  }
+}
+@media screen and (min-width: 1px) and (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+  .article-formating {
+    padding-top: 2rem;
+    border-width: 0.5rem;
+  }
+  #toggle {
+    position: fixed;
+    z-index: 10;
+    display: block;
+    width: 7vw;
+    height: 0.3rem;
+    top: 11vw;
+    right: 5.5vw;
+    background-color: #000;
+    outline: 0.1rem solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: ease-in-out 0.5s all;
+  }
+  #toggle::before, #toggle::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10vw;
+    height: 0.3rem;
+    background-color: #000;
+    outline: 0.1rem solid rgba(255, 255, 255, 0.7);
+    transition: ease-in-out 0.5s all;
+  }
+  #toggle::before {
+    top: -2.5vw;
+    right: 0;
+  }
+  #toggle::after {
+    top: 2.5vw;
+    right: 0;
+  }
+  #toggle.active {
+    background-color: transparent;
+  }
+  #toggle.active::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  #toggle.active::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  #language {
+    position: fixed;
+    z-index: 4;
+    top: 7vw;
+    right: -137vw;
+    font-size: 1.5rem;
+    transition: ease-in-out 0.3s all;
+  }
+  #language.active {
+    right: 70vw;
+  }
+  nav .logo .logo-top {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+  nav .logo .logo-bottom {
+    font-size: 0.78rem;
+  }
+  nav #navbar {
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 0.34rem solid #000;
+    right: -100%;
+    top: 0;
+    transition: ease-in-out 0.3s all;
+  }
+  nav #navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25vw;
+  }
+  nav #navbar ul li .underlined {
+    border-width: 0.3rem;
+  }
+  nav #navbar ul li a {
+    font-size: 2.5rem;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  nav #navbar.active {
+    right: 0;
+  }
+  .header {
+    margin-bottom: 28vw;
+  }
+  .header img {
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+  }
+  .header .lego-house {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    top: 8%;
+    right: 53%;
+  }
+  .header .lego-house .underlined {
+    border-width: 0.5rem;
+  }
+  .header .carousel {
+    bottom: -22vw;
+    right: 18vw;
+    width: 60%;
+  }
+  .header .carousel img {
+    box-shadow: none;
+  }
+  .header .carousel .arrows {
+    justify-content: center;
+    font-size: 2.5rem;
+  }
+  .header .carousel .arrows p {
+    margin: 0 2rem;
+  }
+  .project {
+    margin-bottom: 18vw;
+  }
+  .project .project-content {
+    flex-wrap: wrap;
+  }
+  .project .project-content .content-one .desktop {
+    display: none;
+  }
+  .project .project-content p {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+  .project .project-content .content-two .mobile {
+    display: block;
+  }
+  .project .project-content .big-project {
+    margin-top: 3rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border-width: 0.5rem;
+  }
+  .finished-projects {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .finished-projects .last-project {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .finished-projects .last-project p {
+    padding: 2rem 4rem 2rem 2rem;
+  }
+  .finished-projects .last-project a {
+    margin-bottom: 2rem;
+  }
+  .finished-projects .other-projects {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .finished-projects .other-projects .penultimate-project {
+    width: 100%;
+    margin-top: 10vw;
+  }
+  .finished-projects .other-projects .penultimate-project a {
+    margin-top: 3rem;
+  }
+  .finished-projects .other-projects .ante-penultimate-project {
+    width: 100%;
+    margin-top: 10vw;
+  }
+  .finished-projects .other-projects .ante-penultimate-project a {
+    margin-top: 3rem;
+  }
+  .lowcost {
+    flex-direction: column-reverse;
+    margin-top: 35vw;
+  }
+  .lowcost .article-formating {
+    width: 100%;
+  }
+  .lowcost .article-formating a {
+    margin-top: 2rem;
+  }
+  .lowcost .lowcost-image {
+    width: 94%;
+    margin-bottom: 10vw;
+  }
+  .lowcost .lowcost-image .lowcost-quote {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    padding: 0.7rem 1.5rem;
+    top: -20vw;
+    right: 6vw;
+    border-width: 0.5rem;
+  }
+  .lowcost .lowcost-image .into {
+    font-size: 3rem;
+    right: -16.3vw;
+    bottom: 11vw;
+  }
+  footer {
+    justify-content: space-evenly;
+  }
+  footer .footer-parts {
+    width: 33%;
+    text-align: center;
+  }
+  footer .footer-parts .logo-footer {
+    position: relative;
+    right: -100%;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -33,23 +33,6 @@ body{
     color: #fff;
 }
 
-
-// UN BOUTON POUR ALLER EN HAUT DE LA PAGE (SI ON VEUT)
-// #page-top{
-//     font-size: 2rem;
-//     line-height: 2.75rem;
-//     text-align: center;
-//     color: #fff;
-//     background-color: #000;
-//     width: 3rem;
-//     height: 3rem;
-//     border-radius: 50%;
-//     position: fixed;
-//     bottom: 4vh;
-//     right: 2vw;
-// }
-
-
 // GRAISSES DE POLICE DE CARACTÈRES
 .black{
     font-weight: 900;
@@ -127,7 +110,7 @@ h4{
 // NAVBAR & SÉLECTION DE LANGAGE
 
 // SÉLECTION DE LANGAGE
-.language{
+#language{
     display: flex;
     justify-content: end;
     font-size: 1rem;
@@ -169,7 +152,7 @@ nav{
             font-size: 1.27rem;
         }
     }
-    .navbar{
+    #navbar{
         ul{
             font-size: 0;
             display: flex;
@@ -290,7 +273,7 @@ nav{
         p{
             color: #fff;
             font-size: 1rem;
-            padding: 5rem 8rem 5rem 2rem;
+            padding: 5rem 6rem 5rem 2rem;
         }
         a{
             margin: 0 2rem 3.5rem;
@@ -540,6 +523,9 @@ footer{
         .last-project{
             width: 60vw;
             margin-bottom: 0;
+            p{
+                padding: 4rem 6rem 4rem 2rem;
+            }
         }
         .other-projects{
             width: 100%;
@@ -627,6 +613,9 @@ footer{
         .last-project{
             width: 60vw;
             margin-bottom: 0;
+            p{
+                padding: 4rem 6rem 4rem 2rem;
+            }
         }
         .other-projects{
             width: 100%;
@@ -662,15 +651,720 @@ footer{
 
 // ÉCRAN DE 768 PX DE LARGE
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    
+    html{
+        font-size: 14px;
+    }
+
+    .article-formating{
+        padding-top: 2rem;
+    }
+
+    // MENU BURGER *************************************************
+
+    #toggle{
+        position: fixed;
+        z-index: 10;
+        display: block;
+        width: 3vw;
+        height: .3rem;
+        top: 7vw;
+        right: 5.5vw;
+        background-color: #000;
+        outline: .1rem solid rgba($color: #fff, $alpha: .7);
+        cursor: pointer;
+        transition: ease-in-out .5s all;
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 5vw;
+            height: .3rem;
+            background-color: #000;
+            outline: .1rem solid rgba($color: #fff, $alpha: .7);
+            transition: ease-in-out .5s all;
+        }
+        &::before{
+            top: -1.75vw;
+            right: 0;
+        }
+        &::after{
+            top: 1.75vw;
+            right: 0;
+        }
+    }
+
+    #toggle.active{
+        background-color: transparent;
+        &::before{
+            top: 0;
+            transform: rotate(45deg);
+        }
+        &::after{
+            top: 0;
+            transform: rotate(-45deg);
+        }
+    }
+
+    #language{
+        position: fixed;
+        z-index: 4;
+        top: 5.3vw;
+        right: -137vw;
+        font-size: 1.5rem;
+        transition: ease-in-out .3s all;
+    }
+
+    #language.active{
+        right: 37vw;
+    }
+
+    nav{
+        #navbar{
+            position: fixed;
+            z-index: 3;
+            width: 50vw;
+            height: 100vh;
+            background-color: rgba($color: #fff, $alpha: .8);
+            border-left: .34rem solid #000;
+            right: -100%;
+            top: 0;
+            transition: ease-in-out .3s all;
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 17vw;
+                li{
+                    .underlined{
+                        border-width: .3rem;
+                    }
+                    a{
+                        font-size: 2.5rem;
+                        width: 100%;
+                        margin: 1.5rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+    nav{
+        #navbar.active{
+            right: 0;
+        }
+    }
+
+    //***************************************************************
+
+    .header{
+        margin-bottom: 25vw;
+        img{
+            width: 100%;
+            box-shadow: 0 10px 10px rgba($color: #000000, $alpha: .4);
+        }
+        .lego-house{
+            font-size: 6rem;
+            line-height: 5rem;
+            top: 9%;
+            right: 55%;
+        }
+        .carousel{
+            bottom: -18vw;
+            right: 18vw;
+            width: 60%;
+            img{
+                box-shadow: none;
+            }
+            .arrows{
+                justify-content: center;
+                font-size: 3rem;
+                p{
+                    margin: 0 4rem;
+                }
+            }
+        }
+    }
+    .project{
+        margin-bottom: 12vw;
+        .project-content{
+            flex-wrap: wrap;
+            .content-one{
+                .desktop{
+                    display: none;
+                }
+            }
+            p{
+                width: 42vw;
+                padding-bottom: 2rem;
+            }
+            .content-two{
+                .mobile{
+                    display: block;
+                }
+            }
+            .big-project{
+                width: 42vw;
+                padding: 2rem 2.5rem;
+            }
+        }
+    }
+
+    .finished-projects{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .last-project{
+            width: 80vw;
+            margin-bottom: 0;
+            p{
+                padding: 4rem 6rem 4rem 2rem;
+            }
+        }
+        .other-projects{
+            width: 100%;
+            .penultimate-project{
+                width: 44.5vw;
+                margin-top: 6.6vw;
+            }
+            .ante-penultimate-project{
+                width: 44.5vw;
+                margin-top: 6.6vw;
+                a{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+
+    .lowcost{
+        flex-direction: column-reverse;
+        margin-top: 25vw;
+        .article-formating{
+            width: 100%;
+            a{
+                margin-top: 2rem;
+            }
+        }
+        .lowcost-image{
+            width: 94%;
+            margin-bottom: 6.6vw;
+            .lowcost-quote{
+                font-size: 4rem;
+                padding: 2rem 2rem;
+                top: -13.6vw;
+                right: 6vw;
+            }
+            .into{
+                font-size: 8rem;
+                right: -18.22vw;
+                bottom: 12vw;
+            }
+        }
+    }
+
+    footer{
+        justify-content: space-evenly;
+        .footer-parts{
+            width: 20%;
+            text-align: center;
+            .logo-footer{
+                position: relative;
+                right: -150%;
+            }
+        }
+    }
 }
 
 // ÉCRAN DE 480 PX DE LARGE
 @media screen and (min-width: 321px) and (max-width: 480px) {
-    
+    html{
+        font-size: 14px;
+    }
+
+    .article-formating{
+        padding-top: 2rem;
+        border-width: .5rem;
+    }
+
+    // MENU BURGER ***********************************************************
+
+    #toggle{
+        position: fixed;
+        z-index: 10;
+        display: block;
+        width: 7vw;
+        height: .3rem;
+        top: 11vw;
+        right: 5.5vw;
+        background-color: #000;
+        outline: .1rem solid rgba($color: #fff, $alpha: .7);
+        cursor: pointer;
+        transition: ease-in-out .5s all;
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 10vw;
+            height: .3rem;
+            background-color: #000;
+            outline: .1rem solid rgba($color: #fff, $alpha: .7);
+            transition: ease-in-out .5s all;
+        }
+        &::before{
+            top: -2.5vw;
+            right: 0;
+        }
+        &::after{
+            top: 2.5vw;
+            right: 0;
+        }
+    }
+
+    #toggle.active{
+        background-color: transparent;
+        &::before{
+            top: 0;
+            transform: rotate(45deg);
+        }
+        &::after{
+            top: 0;
+            transform: rotate(-45deg);
+        }
+    }
+
+    #language{
+        position: fixed;
+        z-index: 4;
+        top: 8vw;
+        right: -137vw;
+        font-size: 1.5rem;
+        transition: ease-in-out .3s all;
+    }
+
+    #language.active{
+        right: 55vw;
+    }
+
+    nav{
+        .logo{
+            .logo-top{
+                font-size: 3rem;
+                line-height: 2.5rem;
+            }
+            .logo-bottom{
+                font-size: .95rem;
+            }
+        }
+        #navbar{
+            position: fixed;
+            z-index: 3;
+            width: 75vw;
+            height: 100vh;
+            background-color: rgba($color: #fff, $alpha: .8);
+            border-left: .34rem solid #000;
+            right: -100%;
+            top: 0;
+            transition: ease-in-out .3s all;
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 17vw;
+                li{
+                    .underlined{
+                        border-width: .3rem;
+                    }
+                    a{
+                        font-size: 2.5rem;
+                        width: 100%;
+                        margin: 1.5rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+    nav{
+        #navbar.active{
+            right: 0;
+        }
+    }
+
+    // ****************************************************************************
+
+    .header{
+        margin-bottom: 25vw;
+        img{
+            width: 100%;
+            box-shadow: 0 10px 10px rgba($color: #000000, $alpha: .4);
+        }
+        .lego-house{
+            font-size: 3rem;
+            line-height: 3rem;
+            top: 8%;
+            right: 63%;
+            .underlined{
+                border-width: .5rem;
+            }
+        }
+        .carousel{
+            bottom: -18vw;
+            right: 18vw;
+            width: 60%;
+            img{
+                box-shadow: none;
+            }
+            .arrows{
+                justify-content: center;
+                font-size: 3rem;
+                p{
+                    margin: 0 4rem;
+                }
+            }
+        }
+    }
+    .project{
+        margin-bottom: 12vw;
+        .project-content{
+            flex-wrap: wrap;
+            .content-one{
+                .desktop{
+                    display: none;
+                }
+            }
+            p{
+                width: 100%;
+                padding-bottom: 2rem;
+            }
+            .content-two{
+                .mobile{
+                    display: block;
+                }
+            }
+            .big-project{
+                margin-top: 3rem;
+                width: 100%;
+                padding: 2rem 2.5rem;
+                border-width: .5rem;
+            }
+        }
+    }
+
+    .finished-projects{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .last-project{
+            width: 100%;
+            margin-bottom: 0;
+            p{
+                padding: 4rem 4rem 4rem 2rem;
+            }
+        }
+        .other-projects{
+            width: 100%;
+            flex-wrap: wrap;
+            .penultimate-project{
+                width: 100%;
+                margin-top: 6.6vw;
+                a{
+                    margin-top: 3rem;
+                }
+            }
+            .ante-penultimate-project{
+                width: 100%;
+                margin-top: 6.6vw;
+                a{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+
+    .lowcost{
+        flex-direction: column-reverse;
+        margin-top: 30vw;
+        .article-formating{
+            width: 100%;
+            a{
+                margin-top: 2rem;
+            }
+        }
+        .lowcost-image{
+            width: 94%;
+            margin-bottom: 6.6vw;
+            .lowcost-quote{
+                font-size: 3rem;
+                padding: .85rem 2rem;
+                top: -18.5vw;
+                right: 6vw;
+                border-width: .5rem;
+            }
+            .into{
+                font-size: 5rem;
+                right: -18.1vw;
+                bottom: 11vw;
+            }
+        }
+    }
+
+    footer{
+        justify-content: space-evenly;
+        .footer-parts{
+            width: 20%;
+            text-align: center;
+            .logo-footer{
+                position: relative;
+                right: -150%;
+            }
+        }
+    }
 }
 
 // ÉCRAN DE 320 PX DE LARGE
 @media screen and (min-width: 1px) and (max-width: 320px) {
-    
+    html{
+        font-size: 14px;
+    }
+
+    .article-formating{
+        padding-top: 2rem;
+        border-width: .5rem;
+    }
+
+    //MENU BURGER ****************************************************** 
+
+    #toggle{
+        position: fixed;
+        z-index: 10;
+        display: block;
+        width: 7vw;
+        height: .3rem;
+        top: 11vw;
+        right: 5.5vw;
+        background-color: #000;
+        outline: .1rem solid rgba($color: #fff, $alpha: .7);
+        cursor: pointer;
+        transition: ease-in-out .5s all;
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 10vw;
+            height: .3rem;
+            background-color: #000;
+            outline: .1rem solid rgba($color: #fff, $alpha: .7);
+            transition: ease-in-out .5s all;
+        }
+        &::before{
+            top: -2.5vw;
+            right: 0;
+        }
+        &::after{
+            top: 2.5vw;
+            right: 0;
+        }
+    }
+
+    #toggle.active{
+        background-color: transparent;
+        &::before{
+            top: 0;
+            transform: rotate(45deg);
+        }
+        &::after{
+            top: 0;
+            transform: rotate(-45deg);
+        }
+    }
+
+    #language{
+        position: fixed;
+        z-index: 4;
+        top: 7vw;
+        right: -137vw;
+        font-size: 1.5rem;
+        transition: ease-in-out .3s all;
+    }
+
+    #language.active{
+        right: 70vw;
+    }
+
+    nav{
+        .logo{
+            .logo-top{
+                font-size: 2.5rem;
+                line-height: 2rem;
+            }
+            .logo-bottom{
+                font-size: .78rem;
+            }
+        }
+
+        #navbar{
+            position: fixed;
+            z-index: 3;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba($color: #fff, $alpha: .8);
+            border-left: .34rem solid #000;
+            right: -100%;
+            top: 0;
+            transition: ease-in-out .3s all;
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 25vw;
+                li{
+                    .underlined{
+                        border-width: .3rem;
+                    }
+                    a{
+                        font-size: 2.5rem;
+                        width: 100%;
+                        margin: 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+    nav{
+        #navbar.active{
+            right: 0;
+        }
+    }
+
+    // ********************************************************************
+
+    .header{
+        margin-bottom: 28vw;
+        img{
+            width: 100%;
+            box-shadow: 0 10px 10px rgba($color: #000000, $alpha: .4);
+        }
+        .lego-house{
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            top: 8%;
+            right: 53%;
+            .underlined{
+                border-width: .5rem;
+            }
+        }
+        .carousel{
+            bottom: -22vw;
+            right: 18vw;
+            width: 60%;
+            img{
+                box-shadow: none;
+            }
+            .arrows{
+                justify-content: center;
+                font-size: 2.5rem;
+                p{
+                    margin: 0 2rem;
+                }
+            }
+        }
+    }
+    .project{
+        margin-bottom: 18vw;
+        .project-content{
+            flex-wrap: wrap;
+            .content-one{
+                .desktop{
+                    display: none;
+                }
+            }
+            p{
+                width: 100%;
+                padding-bottom: 2rem;
+            }
+            .content-two{
+                .mobile{
+                    display: block;
+                }
+            }
+            .big-project{
+                margin-top: 3rem;
+                width: 100%;
+                padding: 2rem 2.5rem;
+                border-width: .5rem;
+            }
+        }
+    }
+
+    .finished-projects{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .last-project{
+            width: 100%;
+            margin-bottom: 0;
+            p{
+                padding: 2rem 4rem 2rem 2rem;
+            }
+            a{
+                margin-bottom: 2rem;
+            }
+        }
+        .other-projects{
+            width: 100%;
+            flex-wrap: wrap;
+            .penultimate-project{
+                width: 100%;
+                margin-top: 10vw;
+                a{
+                    margin-top: 3rem;
+                }
+            }
+            .ante-penultimate-project{
+                width: 100%;
+                margin-top: 10vw;
+                a{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+
+    .lowcost{
+        flex-direction: column-reverse;
+        margin-top: 35vw;
+        .article-formating{
+            width: 100%;
+            a{
+                margin-top: 2rem;
+            }
+        }
+        .lowcost-image{
+            width: 94%;
+            margin-bottom: 10vw;
+            .lowcost-quote{
+                font-size: 2rem;
+                line-height: 3.5rem;
+                padding: .7rem 1.5rem;
+                top: -20vw;
+                right: 6vw;
+                border-width: .5rem;
+            }
+            .into{
+                font-size: 3rem;
+                right: -16.3vw;
+                bottom: 11vw;
+            }
+        }
+    }
+
+    footer{
+        justify-content: space-evenly;
+        .footer-parts{
+            width: 33%;
+            text-align: center;
+            .logo-footer{
+                position: relative;
+                right: -100%;
+            }
+        }
+    }
 }
